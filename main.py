@@ -1,13 +1,8 @@
 n = int(input())
 nums = [int(input()) for _ in range(n)]
-# Find and print the second largest unique value
+# Use a comprehension to filter the evens and double each
 
-unique_num = []
+result = [x * 2 for x in nums if x % 2 ==0]
 
-for num in nums:
-    if num not in unique_num:
-        unique_num.append(num)
-        
-unique_num.sort()
-
-print(unique_num[-2])
+for num in result:
+    print(num)
