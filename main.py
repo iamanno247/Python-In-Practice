@@ -1,13 +1,10 @@
-n = int(input())
-nums = [int(input()) for _ in range(n)]
+text = input().strip().split()
+# Count word frequencies and print each in first-seen order
 
-# Hint: write a function that returns a tuple (min, max),
-# then unpack and print each on its own line.
+text_dict = {}
 
-def min_max(numbers):
-    return min(nums), max(nums)
-
-min, max = min_max(nums)
-
-print(min)
-print(max)
+for words in text:
+    text_dict[words] = text.count(words)
+    
+for key, value in text_dict.items():
+    print(f"{key} {value}")
