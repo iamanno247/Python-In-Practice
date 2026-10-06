@@ -1,10 +1,11 @@
-text = input().strip().split()
-# Count word frequencies and print each in first-seen order
+from collections import defaultdict
 
-text_dict = {}
+num = int(input())
+groups = defaultdict(list)
 
-for words in text:
-    text_dict[words] = text.count(words)
+for _ in range(num):
+    student, group = input().strip().split()
+    groups[group].append(student)
     
-for key, value in text_dict.items():
-    print(f"{key} {value}")
+for group , students in groups.items():
+    print(f"{group}: {', '.join(students)}")
