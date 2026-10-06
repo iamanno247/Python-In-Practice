@@ -1,8 +1,13 @@
 n = int(input())
 nums = [int(input()) for _ in range(n)]
-# Use a comprehension to filter the evens and double each
 
-result = [x * 2 for x in nums if x % 2 ==0]
+# Hint: write a function that returns a tuple (min, max),
+# then unpack and print each on its own line.
 
-for num in result:
-    print(num)
+def min_max(numbers):
+    return min(nums), max(nums)
+
+min, max = min_max(nums)
+
+print(min)
+print(max)
