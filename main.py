@@ -1,11 +1,6 @@
-from collections import defaultdict
+a = set(input().split())
+b = set(input().split())
+# Find common elements, sort them, print space-separated
+and_sorted = sorted(a & b)
 
-num = int(input())
-groups = defaultdict(list)
-
-for _ in range(num):
-    student, group = input().strip().split()
-    groups[group].append(student)
-    
-for group , students in groups.items():
-    print(f"{group}: {', '.join(students)}")
+print(f"{' '.join(and_sorted)}")
